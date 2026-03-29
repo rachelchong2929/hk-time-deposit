@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香港定期存款利率比較 | HK Time Deposit Rates</title>
+<style>
+:root{--bg:#0f1117;--surface:#1a1d27;--surface2:#242836;--border:#2d3244;--text:#e4e6ed;--text2:#8b8fa3;--accent:#6c5ce7;--accent2:#a29bfe;--green:#00b894;--green-bg:rgba(0,184,148,.1);--yellow:#fdcb6e;--red:#e17055;--blue:#74b9ff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Noto Sans HK','PingFang HK',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1400px;margin:0 auto;padding:0 20px}
+header{background:linear-gradient(135deg,#1a1d27,#242836);border-bottom:1px solid var(--border);padding:24px 0}
+.header-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+h1{font-size:26px;font-weight:700}
+h1 span{color:var(--accent2)}
+.subtitle{color:var(--text2);font-size:13px;margin-top:2px}
+.lang-btn{background:var(--surface2);border:1px solid var(--border);color:var(--text);padding:8px 16px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;transition:all .2s;white-space:nowrap}
+.lang-btn:hover{border-color:var(--accent);color:var(--accent2)}
+.meta-row{display:flex;gap:16px;margin-top:12px;flex-wrap:wrap}
+.badge{display:inline-flex;align-items:center;gap:6px;background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:5px 10px;font-size:12px;color:var(--text2)}
+.badge strong{color:var(--text)}
+/* Tabs */
+.tabs{display:flex;gap:4px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:4px;margin:16px 0}
+.tab{background:none;border:none;color:var(--text2);padding:10px 20px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:600;transition:all .2s}
+.tab:hover{color:var(--text);background:var(--surface2)}
+.tab.active{color:#fff;background:var(--accent)}
+.tab .count{font-size:11px;opacity:.7;margin-left:4px}
+/* Fund Toggle */
+.fund-toggle{display:flex;gap:4px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:4px;margin-bottom:14px}
+.fund-btn{background:none;border:none;color:var(--text2);padding:8px 18px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;transition:all .2s}
+.fund-btn:hover{color:var(--text);background:var(--surface2)}
+.fund-btn.active{color:#fff;background:var(--green)}
+.fund-toggle-wrap{display:none}
+.fund-toggle-wrap.show{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.fund-hint{font-size:12px;color:var(--text2);margin-left:8px}
+/* Profile Panel */
+.profile-panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:16px}
+.profile-panel h3{font-size:14px;margin-bottom:10px;color:var(--text)}
+.profile-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:6px}
+.bank-check{display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:6px;cursor:pointer;font-size:13px;transition:background .15s}
+.bank-check:hover{background:var(--surface2)}
+.bank-check input{accent-color:var(--accent);width:16px;height:16px;cursor:pointer}
+.bank-check .bname{color:var(--text)}
+.bank-check .bsub{color:var(--text2);font-size:11px;margin-left:4px}
+.profile-toggle{background:var(--surface2);border:1px solid var(--border);color:var(--accent2);padding:6px 14px;border-radius:8px;cursor:pointer;font-size:12px;margin-bottom:10px}
+.profile-toggle:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.profile-hint{color:var(--text2);font-size:13px;text-align:center;padding:20px}
+/* Calculator */
+.calc-panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:16px;overflow:hidden}
+.calc-header{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;cursor:pointer;user-select:none}
+.calc-header:hover{background:var(--surface2)}
+.calc-header h3{font-size:15px;margin:0}
+.calc-arrow{color:var(--text2);font-size:14px;transition:transform .2s}
+.calc-arrow.open{transform:rotate(180deg)}
+.calc-body{padding:0 20px 16px;display:none}
+.calc-body.open{display:block}
+.calc-row{display:flex;gap:10px;align-items:flex-end;flex-wrap:nowrap}
+.calc-field{display:flex;flex-direction:column;gap:3px;flex:1;min-width:0}
+.calc-field label{font-size:11px;color:var(--text2);white-space:nowrap}
+.calc-field input,.calc-field select{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:9px 12px;color:var(--text);font-size:14px;outline:none;width:100%}
+.calc-field input:focus,.calc-field select:focus{border-color:var(--accent)}
+.calc-btn{background:var(--accent);border:none;color:#fff;padding:9px 18px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;white-space:nowrap;flex-shrink:0}
+.calc-btn:hover{background:var(--accent2)}
+.calc-results{margin-top:16px}
+.calc-results table{width:100%;font-size:13px}
+.calc-results th{text-align:left;padding:8px;color:var(--text2);border-bottom:1px solid var(--border);font-size:11px;text-transform:uppercase}
+.calc-results td{padding:8px}
+.calc-results tr.greyed{opacity:.4}
+.calc-results .interest{color:var(--green);font-weight:700}
+.dps-warn{background:rgba(225,112,85,.1);border:1px solid rgba(225,112,85,.3);border-radius:8px;padding:12px 16px;margin-top:12px;font-size:13px;color:var(--red)}
+/* Filters */
+.filters{display:flex;gap:10px;padding:12px 0;flex-wrap:wrap;align-items:center}
+.filter-group{display:flex;gap:4px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:4px}
+.fbtn{background:none;border:none;color:var(--text2);padding:7px 12px;border-radius:8px;cursor:pointer;font-size:12px;font-weight:500;transition:all .2s;white-space:nowrap}
+.fbtn:hover{color:var(--text);background:var(--surface2)}
+.fbtn.active{color:#fff;background:var(--accent)}
+.search-box{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:7px 12px;color:var(--text);font-size:12px;width:180px;outline:none}
+.search-box:focus{border-color:var(--accent)}
+.search-box::placeholder{color:var(--text2)}
+.sort-select{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:7px 12px;color:var(--text);font-size:12px;outline:none;cursor:pointer}
+.toggle-promo{display:flex;align-items:center;gap:6px;margin-left:auto}
+.toggle-promo label{font-size:12px;color:var(--text2);cursor:pointer}
+.tswitch{position:relative;width:36px;height:20px}
+.tswitch input{opacity:0;width:0;height:0}
+.tswitch .sl{position:absolute;cursor:pointer;inset:0;background:var(--surface2);border:1px solid var(--border);border-radius:10px;transition:.2s}
+.tswitch .sl::before{content:'';position:absolute;width:14px;height:14px;left:2px;top:2px;background:var(--text2);border-radius:50%;transition:.2s}
+.tswitch input:checked+.sl{background:var(--accent);border-color:var(--accent)}
+.tswitch input:checked+.sl::before{transform:translateX(16px);background:#fff}
+/* Summary */
+.summary-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:14px}
+.scard{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px}
+.scard .lb{font-size:11px;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:2px}
+.scard .vl{font-size:22px;font-weight:700;color:var(--green)}
+.scard .dt{font-size:11px;color:var(--text2);margin-top:1px}
+/* Table */
+.tw{overflow-x:auto;border:1px solid var(--border);border-radius:12px;margin-bottom:24px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{background:var(--surface2);padding:12px 14px;text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--text2);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:10;cursor:pointer;user-select:none;white-space:nowrap}
+thead th:hover{color:var(--text)}
+tbody tr{border-bottom:1px solid var(--border);transition:background .15s}
+tbody tr:hover{background:rgba(108,92,231,.05)}
+tbody tr:last-child{border-bottom:none}
+td{padding:10px 14px;white-space:nowrap}
+.bn{display:flex;flex-direction:column;gap:1px}
+.bn .p{font-weight:600;color:var(--text)}
+.bn .s{font-size:11px;color:var(--text2)}
+.bn a{color:inherit;text-decoration:none}
+.bn a:hover .p{color:var(--accent2)}
+.cb{display:inline-block;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:600}
+.cat-big4{background:rgba(116,185,255,.15);color:var(--blue)}
+.cat-local{background:rgba(253,203,110,.15);color:var(--yellow)}
+.cat-foreign{background:rgba(162,155,254,.15);color:var(--accent2)}
+.cat-chinese{background:rgba(225,112,85,.15);color:var(--red)}
+.cat-virtual{background:rgba(0,184,148,.15);color:var(--green)}
+.rc{font-weight:600;font-variant-numeric:tabular-nums}
+.rc .promo{display:block;font-size:10px;font-weight:400;color:var(--yellow);margin-top:1px;cursor:help}
+.rc .na{color:var(--text2);font-weight:400;font-size:11px}
+.best{background:var(--green-bg);border-radius:4px;padding:1px 5px}
+.rh{color:var(--green)}.rm{color:var(--yellow)}.rl{color:var(--text2)}
+.md{font-size:11px;color:var(--text2)}
+.nc{max-width:180px;white-space:normal;font-size:11px;color:var(--text2);line-height:1.3}
+footer{background:var(--surface);border-top:1px solid var(--border);padding:20px 0;margin-top:16px}
+footer p{font-size:11px;color:var(--text2);margin-bottom:6px}
+footer a{color:var(--accent2);text-decoration:none}
+@media(max-width:768px){h1{font-size:20px}.filters{gap:6px}.search-box{width:100%}td,th{padding:6px 8px;font-size:11px}.summary-cards{grid-template-columns:repeat(2,1fr)}.calc-row{gap:6px}.calc-field input,.calc-field select{padding:8px 8px;font-size:13px}.calc-btn{padding:8px 12px;font-size:12px}.profile-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<div class="header-top">
+<div>
+<h1 id="title">🏦 香港定期存款 <span>利率比較</span></h1>
+<p class="subtitle" id="subtitle">涵蓋28間銀行，數據更新至2026年3月</p>
+</div>
+<button class="lang-btn" id="langBtn" onclick="toggleLang()">🌐 English</button>
+</div>
+<div class="meta-row">
+<div class="badge">📅 <span id="lbUpd">最後更新：</span><strong id="lastUpd">—</strong></div>
+<div class="badge">🏦 <span id="lbCnt">銀行數目：</span><strong id="bCnt">—</strong></div>
+<div class="badge">🛡️ <span id="lbDps">存款保障：</span><strong id="dpsAmt">每間銀行最高 HK$800,000</strong></div>
+</div>
+</div>
+</header>
+<main class="container">
+
+<!-- Tabs -->
+<div class="tabs" id="mainTabs">
+<button class="tab active" data-tab="mine" id="tabMine">🏦 我的銀行 <span class="count" id="cntMine"></span></button>
+<button class="tab" data-tab="other" id="tabOther">🆕 其他銀行 <span class="count" id="cntOther"></span></button>
+<button class="tab" data-tab="all" id="tabAll">📋 全部 <span class="count" id="cntAll"></span></button>
+</div>
+
+<!-- Profile Panel -->
+<div id="profileSection">
+
+<!-- Fund Toggle (only visible on My Banks tab) -->
+<div class="fund-toggle-wrap show" id="fundToggleWrap">
+<div class="fund-toggle" id="fundToggle">
+<button class="fund-btn active" data-fund="new" id="fundNew">💰 新資金</button>
+<button class="fund-btn" data-fund="existing" id="fundExist">🏦 現有資金</button>
+</div>
+<span class="fund-hint" id="fundHint">新資金 = 從其他銀行轉入的新存款，通常享較高利率</span>
+</div>
+<button class="profile-toggle" id="profileBtn" onclick="toggleProfile()">⚙️ 設定我的銀行</button>
+<div class="profile-panel" id="profilePanel" style="display:none">
+<h3 id="profTitle">選擇你擁有帳戶的銀行：</h3>
+<div class="profile-grid" id="profileGrid"></div>
+</div>
+</div>
+
+<!-- Calculator -->
+<div class="calc-panel" id="calcPanel">
+<div class="calc-header" onclick="toggleCalc()">
+<h3 id="calcTitle">💰 存款計算機</h3>
+<span class="calc-arrow open" id="calcArrow">▼</span>
+</div>
+<div class="calc-body open" id="calcBody">
+<div class="calc-row">
+<div class="calc-field">
+<label id="calcAmtLb">存款金額 (HK$)</label>
+<input type="text" id="calcAmt" value="100,000" inputmode="numeric">
+</div>
+<div class="calc-field">
+<label id="calcTermLb">存款期</label>
+<select id="calcTerm">
+<option value="1M">1個月</option>
+<option value="3M" selected>3個月</option>
+<option value="6M">6個月</option>
+<option value="12M">12個月</option>
+</select>
+</div>
+<button class="calc-btn" id="calcBtn" onclick="calculate()">計算</button>
+</div>
+<div id="dpsWarn" class="dps-warn" style="display:none"></div>
+<div class="calc-results" id="calcResults"></div>
+</div>
+</div>
+
+<!-- Summary -->
+<div class="summary-cards" id="sumCards"></div>
+
+<!-- Filters -->
+<div class="filters">
+<div class="filter-group" id="catFilter">
+<button class="fbtn active" data-cat="all" data-i="all">全部</button>
+<button class="fbtn" data-cat="Big 4" data-i="big4">四大</button>
+<button class="fbtn" data-cat="Local" data-i="local">本地</button>
+<button class="fbtn" data-cat="Foreign" data-i="foreign">外資</button>
+<button class="fbtn" data-cat="Chinese" data-i="chinese">中資</button>
+<button class="fbtn" data-cat="Virtual" data-i="virtual">虛擬</button>
+</div>
+<input type="text" class="search-box" id="sBox" placeholder="搜尋銀行...">
+<select class="sort-select" id="sSort">
+<option value="3M-desc" data-i="s3">排序：3個月 ↓</option>
+<option value="6M-desc" data-i="s6">排序：6個月 ↓</option>
+<option value="12M-desc" data-i="s12">排序：12個月 ↓</option>
+<option value="1M-desc" data-i="s1">排序：1個月 ↓</option>
+<option value="name-asc" data-i="sn">排序：名稱 A-Z</option>
+</select>
+<!-- promo toggle removed -->
+</div>
+
+<!-- Table -->
+<div class="tw">
+<table><thead><tr>
+<th data-col="bank" id="thBank">銀行</th>
+<th data-col="category" id="thCat">類別</th>
+<th data-col="1M" id="th1M">1個月</th>
+<th data-col="3M" id="th3M">3個月</th>
+<th data-col="6M" id="th6M">6個月</th>
+<th data-col="12M" id="th12M">12個月</th>
+<th data-col="min" id="thMin">最低存款</th>
+<th id="thNotes">備註</th>
+</tr></thead><tbody id="tbody"></tbody></table>
+</div>
+</main>
+
+<footer><div class="container">
+<p id="fDisc">⚠️ <strong>免責聲明：</strong>所示利率僅供參考。推廣利率設有特定條件（新客戶、新資金、存款上限等）。存款前請向銀行直接查詢。</p>
+<p id="fSrc">數據來源：各銀行官方網站、香港經濟日報、HK01、富途、MoneySmart。最後更新：2026年3月。</p>
+<p id="fDps">🛡️ 所有銀行均持有香港金管局牌照，受<a href="https://www.dps.org.hk/" target="_blank">存款保障計劃</a>保障（每人每銀行最高 HK$800,000）。</p>
+</div></footer>
+<script>
+// ── i18n ──
+let lang='zh';
+const L={
+zh:{title:'🏦 香港定期存款 <span>利率比較</span>',subtitle:'涵蓋28間銀行，數據更新至2026年3月',langBtn:'🌐 English',
+lbUpd:'最後更新：',lbCnt:'銀行數目：',lbDps:'存款保障：',dpsAmt:'每間銀行最高 HK$800,000',
+tabMine:'🏦 我的銀行',tabOther:'🆕 其他銀行',tabAll:'📋 全部',
+profBtn:'⚙️ 設定我的銀行',profTitle:'選擇你擁有帳戶的銀行：',
+fundNew:'💰 新資金',fundExist:'🏦 現有資金',fundHint:'新資金 = 從其他銀行轉入的新存款，通常享較高利率',
+calcTitle:'💰 存款計算機',calcAmtLb:'存款金額 (HK$)',calcTermLb:'存款期',calcBtn:'計算',
+calcRank:'排名',calcBank:'銀行',calcRate:'年利率',calcInt:'預計利息',calcInelig:'未達最低存款',
+dpsWarnMsg:'⚠️ 存款金額超過 HK$800,000！建議分散存放於多間銀行，以確保全額受存款保障計劃保障。',
+bestPfx:'最高',hint:'請先選擇你擁有帳戶的銀行 ⬆️',
+cats:{all:'全部','Big 4':'四大',Local:'本地',Foreign:'外資',Chinese:'中資',Virtual:'虛擬'},
+periods:{'1M':'1個月','3M':'3個月','6M':'6個月','12M':'12個月'},
+th:{bank:'銀行',cat:'類別','1M':'1個月','3M':'3個月','6M':'6個月','12M':'12個月',min:'最低存款',notes:'備註'},
+sorts:{s3:'排序：3個月 ↓',s6:'排序：6個月 ↓',s12:'排序：12個月 ↓',s1:'排序：1個月 ↓',sn:'排序：名稱 A-Z'},
+search:'搜尋銀行...',lbPromo:'顯示推廣',
+fDisc:'⚠️ <strong>免責聲明：</strong>所示利率僅供參考。推廣利率設有特定條件。存款前請向銀行直接查詢。',
+fSrc:'數據來源：各銀行官方網站、香港經濟日報、HK01、富途、MoneySmart。最後更新：2026年3月。',
+fDps:'🛡️ 所有銀行均持有香港金管局牌照，受<a href="https://www.dps.org.hk/" target="_blank">存款保障計劃</a>保障（每人每銀行最高 HK$800,000）。'},
+en:{title:'🏦 HK Time Deposit <span>Rate Comparison</span>',subtitle:'28 banks, updated March 2026',langBtn:'🌐 中文',
+lbUpd:'Updated: ',lbCnt:'Banks: ',lbDps:'Protection: ',dpsAmt:'Up to HK$800,000 per bank',
+tabMine:'🏦 My Banks',tabOther:'🆕 Other Banks',tabAll:'📋 All Banks',
+profBtn:'⚙️ Set Up My Banks',profTitle:'Select banks you have an account with:',
+fundNew:'💰 New Funds',fundExist:'🏦 Existing Funds',fundHint:'New Funds = fresh deposits transferred from other banks, usually higher rates',
+calcTitle:'💰 Deposit Calculator',calcAmtLb:'Amount (HK$)',calcTermLb:'Term',calcBtn:'Calculate',
+calcRank:'Rank',calcBank:'Bank',calcRate:'Rate (p.a.)',calcInt:'Est. Interest',calcInelig:'Below minimum',
+dpsWarnMsg:'⚠️ Amount exceeds HK$800,000! Consider splitting across multiple banks for full deposit protection coverage.',
+bestPfx:'Best',hint:'Please select your banks above first ⬆️',
+cats:{all:'All','Big 4':'Big 4',Local:'Local',Foreign:'Foreign',Chinese:'Chinese',Virtual:'Virtual'},
+periods:{'1M':'1 Month','3M':'3 Months','6M':'6 Months','12M':'12 Months'},
+th:{bank:'Bank',cat:'Category','1M':'1M','3M':'3M','6M':'6M','12M':'12M',min:'Min Deposit',notes:'Notes'},
+sorts:{s3:'Sort: 3M ↓',s6:'Sort: 6M ↓',s12:'Sort: 12M ↓',s1:'Sort: 1M ↓',sn:'Sort: Name A-Z'},
+search:'Search bank...',lbPromo:'Show promos',
+fDisc:'⚠️ <strong>Disclaimer:</strong> Rates are for reference only. Promo rates have conditions. Verify with banks before depositing.',
+fSrc:'Data from bank websites, HKET, HK01, Futu, MoneySmart. Last update: March 2026.',
+fDps:'🛡️ All banks are HKMA-licensed, covered by <a href="https://www.dps.org.hk/" target="_blank">Deposit Protection Scheme</a> (up to HK$800,000/depositor/bank).'}
+};
+
+function t(k){return L[lang][k]||k}
+function toggleLang(){lang=lang==='zh'?'en':'zh';applyLang();renderAll();}
+
+function applyLang(){
+const l=L[lang];
+document.getElementById('title').innerHTML=l.title;
+document.getElementById('subtitle').textContent=l.subtitle;
+document.getElementById('langBtn').textContent=l.langBtn;
+['lbUpd','lbCnt','lbDps','dpsAmt'].forEach(k=>{const e=document.getElementById(k);if(e)e.textContent=l[k];});
+document.getElementById('tabMine').firstChild.textContent=l.tabMine+' ';
+document.getElementById('tabOther').firstChild.textContent=l.tabOther+' ';
+document.getElementById('tabAll').firstChild.textContent=l.tabAll+' ';
+document.getElementById('profileBtn').textContent=l.profBtn;
+document.getElementById('profTitle').textContent=l.profTitle;
+document.getElementById('fundNew').textContent=l.fundNew;
+document.getElementById('fundExist').textContent=l.fundExist;
+document.getElementById('fundHint').textContent=l.fundHint;
+document.getElementById('calcTitle').textContent=l.calcTitle;
+document.getElementById('calcAmtLb').textContent=l.calcAmtLb;
+document.getElementById('calcTermLb').textContent=l.calcTermLb;
+document.getElementById('calcBtn').textContent=l.calcBtn;
+document.querySelectorAll('[data-i]').forEach(el=>{const k=el.dataset.i;if(l.cats[el.dataset.cat])el.textContent=l.cats[el.dataset.cat];else if(l.sorts[k])el.textContent=l.sorts[k];});
+document.getElementById('sBox').placeholder=l.search;
+var lbp=document.getElementById('lbPromo');if(lbp)lbp.textContent=l.lbPromo;
+document.getElementById('thBank').textContent=l.th.bank;
+document.getElementById('thCat').textContent=l.th.cat;
+document.getElementById('th1M').textContent=l.th['1M'];
+document.getElementById('th3M').textContent=l.th['3M'];
+document.getElementById('th6M').textContent=l.th['6M'];
+document.getElementById('th12M').textContent=l.th['12M'];
+document.getElementById('thMin').textContent=l.th.min;
+document.getElementById('thNotes').textContent=l.th.notes;
+document.getElementById('fDisc').innerHTML=l.fDisc;
+document.getElementById('fSrc').innerHTML=l.fSrc;
+document.getElementById('fDps').innerHTML=l.fDps;
+// calc term options
+const sel=document.getElementById('calcTerm');
+['1M','3M','6M','12M'].forEach((p,i)=>{sel.options[i].textContent=l.periods[p];});
+buildProfile();
+}
+
+// ── State ──
+let banks=[],myBanks=new Set(),curTab='mine',curCat='all',curSearch='',curSort='3M-desc',showPromo=true,profileOpen=false,fundType='new';
+
+function loadMyBanks(){try{const s=localStorage.getItem('hktd_mybanks');if(s)myBanks=new Set(JSON.parse(s));}catch(e){}}
+function saveMyBanks(){localStorage.setItem('hktd_mybanks',JSON.stringify([...myBanks]));}
+
+// ── Load Data ──
+async function loadData(){
+try{const r=await fetch('data/rates.json');const d=await r.json();banks=d.banks;
+document.getElementById('lastUpd').textContent=d.last_updated;
+document.getElementById('bCnt').textContent=banks.length;
+buildProfile();renderAll();}catch(e){document.getElementById('tbody').innerHTML='<tr><td colspan="8" style="text-align:center;padding:40px;color:var(--text2)">載入失敗</td></tr>';}
+}
+
+// ── Profile ──
+function toggleProfile(){profileOpen=!profileOpen;document.getElementById('profilePanel').style.display=profileOpen?'block':'none';}
+
+function buildProfile(){
+const grid=document.getElementById('profileGrid');
+const l=lang;
+grid.innerHTML=banks.map(b=>{
+const nm=l==='zh'?b.bank_zh:b.bank;
+const sub=l==='zh'?b.bank:b.bank_zh;
+const chk=myBanks.has(b.bank)?'checked':'';
+return '<label class="bank-check"><input type="checkbox" value="'+b.bank+'" '+chk+' onchange="togBank(this)"><span class="bname">'+nm+'</span><span class="bsub">'+sub+'</span></label>';
+}).join('');
+}
+
+function togBank(el){if(el.checked)myBanks.add(el.value);else myBanks.delete(el.value);saveMyBanks();renderAll();}
+
+// ── Tabs ──
+document.getElementById('mainTabs').addEventListener('click',e=>{
+const tab=e.target.closest('.tab');if(!tab)return;
+document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+tab.classList.add('active');curTab=tab.dataset.tab;
+// Show/hide fund toggle based on tab
+document.getElementById('fundToggleWrap').className=curTab==='mine'?'fund-toggle-wrap show':'fund-toggle-wrap';
+renderAll();
+});
+
+// ── Fund Toggle ──
+document.getElementById('fundToggle').addEventListener('click',e=>{
+const btn=e.target.closest('.fund-btn');if(!btn)return;
+document.querySelectorAll('.fund-btn').forEach(x=>x.classList.remove('active'));
+btn.classList.add('active');fundType=btn.dataset.fund;renderAll();
+});
+
+// ── Filters ──
+document.getElementById('catFilter').addEventListener('click',e=>{
+const b=e.target.closest('.fbtn');if(!b)return;
+document.querySelectorAll('#catFilter .fbtn').forEach(x=>x.classList.remove('active'));
+b.classList.add('active');curCat=b.dataset.cat;renderTable();
+});
+document.getElementById('sBox').addEventListener('input',e=>{curSearch=e.target.value;renderTable();});
+document.getElementById('sSort').addEventListener('change',e=>{curSort=e.target.value;renderTable();});
+/* pTog removed */
+document.querySelectorAll('thead th[data-col]').forEach(th=>{
+th.addEventListener('click',()=>{const c=th.dataset.col;
+if(c==='bank')curSort=curSort==='name-asc'?'name-desc':'name-asc';
+else if(['1M','3M','6M','12M'].includes(c))curSort=curSort===c+'-desc'?c+'-asc':c+'-desc';
+renderTable();});
+});
+
+// ── Render ──
+function renderAll(){updateCounts();renderSummary();renderTable();}
+
+function getRates(b){
+// On My Banks tab, use new_fund_rates or rates based on toggle
+// On Other Banks tab, always show new_fund_rates (you'd be new customer)
+// On All tab, show based on toggle
+if(curTab==='other') return b.new_fund_rates||b.rates;
+if(fundType==='new') return b.new_fund_rates||b.rates;
+return b.rates;
+}
+
+function getFiltered(){
+let list=banks;
+if(curTab==='mine')list=list.filter(b=>myBanks.has(b.bank));
+else if(curTab==='other')list=list.filter(b=>!myBanks.has(b.bank));
+if(curCat!=='all')list=list.filter(b=>b.category===curCat);
+if(curSearch){const q=curSearch.toLowerCase();list=list.filter(b=>b.bank.toLowerCase().includes(q)||b.bank_zh.includes(q)||b.category.toLowerCase().includes(q));}
+return list;
+}
+
+function sortList(list){
+const[sk,sd]=curSort.split('-');
+list.sort((a,b)=>{
+if(sk==='name'){const an=lang==='zh'?a.bank_zh:a.bank,bn=lang==='zh'?b.bank_zh:b.bank;return sd==='asc'?an.localeCompare(bn):bn.localeCompare(an);}
+const ar=getRates(a),br2=getRates(b);
+return sd==='desc'?(br2[sk]||0)-(ar[sk]||0):(ar[sk]||0)-(br2[sk]||0);
+});return list;
+}
+
+function updateCounts(){
+document.getElementById('cntMine').textContent='('+banks.filter(b=>myBanks.has(b.bank)).length+')';
+document.getElementById('cntOther').textContent='('+banks.filter(b=>!myBanks.has(b.bank)).length+')';
+document.getElementById('cntAll').textContent='('+banks.length+')';
+}
+
+function renderSummary(){
+const list=getFiltered();const ps=['1M','3M','6M','12M'];
+document.getElementById('sumCards').innerHTML=ps.map(p=>{
+let best=null,bn='',bz='';
+list.forEach(b=>{const r=getRates(b);if(r[p]&&(!best||r[p]>best)){best=r[p];bn=b.bank;bz=b.bank_zh;}});
+const lb=t('bestPfx')+' '+(L[lang].periods[p]||p);
+const bk=lang==='zh'?bz:bn;
+return '<div class="scard"><div class="lb">'+lb+'</div><div class="vl">'+(best?best.toFixed(2)+'%':'—')+'</div><div class="dt">'+bk+'</div></div>';
+}).join('');
+}
+
+function renderTable(){
+const list=sortList(getFiltered());
+const tbody=document.getElementById('tbody');
+if(curTab==='mine'&&myBanks.size===0){
+tbody.innerHTML='<tr><td colspan="8" style="text-align:center;padding:40px;color:var(--text2)">'+t('hint')+'</td></tr>';return;}
+const br={};['1M','3M','6M','12M'].forEach(p=>{let m=0;list.forEach(b=>{const r=getRates(b);if(r[p]&&r[p]>m)m=r[p];});br[p]=m;});
+const isOther=curTab==='other';
+tbody.innerHTML=list.map(b=>{
+const pn=lang==='zh'?b.bank_zh:b.bank,sn=lang==='zh'?b.bank:b.bank_zh;
+const cl=L[lang].cats[b.category]||b.category;
+return '<tr><td><div class="bn"><a href="'+b.url+'" target="_blank"><span class="p">'+pn+'</span></a><span class="s">'+sn+'</span></div></td>'+
+'<td><span class="cb cat-'+b.category.toLowerCase().replace(' ','')+'">'+cl+'</span></td>'+
+rc(b,'1M',br['1M'],isOther)+rc(b,'3M',br['3M'],isOther)+rc(b,'6M',br['6M'],isOther)+rc(b,'12M',br['12M'],isOther)+
+'<td class="md">'+b.min_deposit+'</td><td class="nc">'+(b.notes||'')+'</td></tr>';
+}).join('');
+}
+
+function rc(b,p,best,isOther){
+const rates=getRates(b);
+const r=rates[p],pr=b.promo_rates&&b.promo_rates[p],ib=r&&r===best&&best>0;
+let h='<td class="rc">';
+if(r!=null){const c=r>=2.5?'rh':r>=2.0?'rm':'rl';h+='<span class="'+c+(ib?' best':'')+'">'+r.toFixed(2)+'%</span>';}
+else h+='<span class="na">—</span>';
+if(showPromo&&pr){const showP=isOther||true;if(showP)h+='<span class="promo" title="'+(pr.note||'')+'">⭐ '+pr.rate.toFixed(1)+'%</span>';}
+return h+'</td>';
+}
+
+// ── Calculator ──
+function calculate(){
+const amt=parseFloat(document.getElementById('calcAmt').value.replace(/,/g,''))||0;
+const term=document.getElementById('calcTerm').value;
+const l=L[lang];
+// DPS warning
+const dw=document.getElementById('dpsWarn');
+if(amt>800000){dw.style.display='block';dw.textContent=l.dpsWarnMsg;}else{dw.style.display='none';}
+// Get banks for current tab
+let list=banks;
+if(curTab==='mine')list=list.filter(b=>myBanks.has(b.bank));
+else if(curTab==='other')list=list.filter(b=>!myBanks.has(b.bank));
+// Calculate
+const days={'1M':30,'3M':91,'6M':182,'12M':365};
+const d=days[term]||91;
+let results=list.map(b=>{
+const rates=getRates(b);
+const rate=rates[term];
+const minStr=b.min_deposit.replace(/[^0-9]/g,'');
+const minAmt=parseInt(minStr)||0;
+const eligible=amt>=minAmt||b.min_deposit.toLowerCase().includes('no min')||b.min_deposit==='No minimum'||minAmt===0;
+const interest=rate?Math.round(amt*rate/100*d/365):0;
+return{bank:b.bank,bank_zh:b.bank_zh,rate:rate,interest:interest,eligible:eligible,url:b.url};
+}).filter(r=>r.rate).sort((a,b)=>b.interest-a.interest);
+const res=document.getElementById('calcResults');
+if(!results.length){res.innerHTML='<p style="color:var(--text2);padding:12px">'+l.hint+'</p>';return;}
+res.innerHTML='<table><thead><tr><th>'+l.calcRank+'</th><th>'+l.calcBank+'</th><th>'+l.calcRate+'</th><th>'+l.calcInt+'</th></tr></thead><tbody>'+
+results.slice(0,15).map((r,i)=>{
+const nm=lang==='zh'?r.bank_zh:r.bank;
+const cls=r.eligible?'':'greyed';
+return '<tr class="'+cls+'"><td>'+(i+1)+'</td><td><a href="'+r.url+'" target="_blank" style="color:var(--text);text-decoration:none">'+nm+'</a></td><td>'+(r.rate?r.rate.toFixed(2)+'%':'—')+'</td><td class="interest">'+(r.eligible?'HK$'+r.interest.toLocaleString():'<span style="color:var(--text2);font-weight:400">'+l.calcInelig+'</span>')+'</td></tr>';
+}).join('')+'</tbody></table>';
+}
+
+// ── Init ──
+// Calc collapse
+function toggleCalc(){
+const body=document.getElementById('calcBody'),arrow=document.getElementById('calcArrow');
+body.classList.toggle('open');arrow.classList.toggle('open');
+}
+
+// Number formatting for amount input
+const calcAmtEl=document.getElementById('calcAmt');
+calcAmtEl.addEventListener('input',function(){
+let v=this.value.replace(/[^0-9]/g,'');
+if(v)this.value=parseInt(v).toLocaleString();
+else this.value='';
+});
+calcAmtEl.addEventListener('focus',function(){this.select();});
+
+loadMyBanks();
+applyLang();
+loadData();
+</script>
+</body></html>
