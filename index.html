@@ -154,6 +154,7 @@ footer a{color:var(--accent2);text-decoration:none}
 <div class="ccy-toggle" id="ccyToggle">
 <button class="ccy-btn active" data-ccy="hkd">🇭🇰 HKD 港幣</button>
 <button class="ccy-btn" data-ccy="usd">🇺🇸 USD 美元</button>
+<button class="ccy-btn" data-ccy="cny">🇨🇳 CNY 人民幣</button>
 </div>
 
 <div class="tabs" id="mainTabs">
@@ -256,13 +257,13 @@ footer a{color:var(--accent2);text-decoration:none}
 // ── i18n ──
 let lang='zh';
 const L={
-zh:{title:'🏦 香港定期存款 <span>利率比較</span>',titleUsd:'🏦 香港美元定期存款 <span>利率比較</span>',subtitle:'涵蓋28間銀行，數據更新至2026年3月',langBtn:'🌐 English',
+zh:{title:'🏦 香港定期存款 <span>利率比較</span>',titleUsd:'🏦 香港美元定期存款 <span>利率比較</span>',titleCny:'🏦 香港人民幣定期存款 <span>利率比較</span>',subtitle:'涵蓋28間銀行，數據更新至2026年3月',langBtn:'🌐 English',
 lbUpd:'最後更新：',lbCnt:'銀行數目：',lbDps:'存款保障：',dpsAmt:'每間銀行最高 HK$800,000',
 tabMine:'🏦 我的銀行',tabOther:'🆕 其他銀行',tabAll:'📋 全部',
 profBtn:'⚙️ 設定我的銀行',profTitle:'選擇你擁有帳戶的銀行：',
 fundNew:'💰 新資金',fundExist:'🏦 現有資金',fundHint:'新資金 = 從其他銀行轉入的新存款，通常享較高利率',
-ccyHkd:'🇭🇰 HKD 港幣',ccyUsd:'🇺🇸 USD 美元',
-calcTitle:'💰 存款計算機',calcAmtLb:'存款金額 (HK$)',calcAmtLbUsd:'存款金額 (US$)',calcTermLb:'存款期',calcBtn:'計算',
+ccyHkd:'🇭🇰 HKD 港幣',ccyUsd:'🇺🇸 USD 美元',ccyCny:'🇨🇳 CNY 人民幣',
+calcTitle:'💰 存款計算機',calcAmtLb:'存款金額 (HK$)',calcAmtLbUsd:'存款金額 (US$)',calcAmtLbCny:'存款金額 (¥)',calcTermLb:'存款期',calcBtn:'計算',
 calcRank:'排名',calcBank:'銀行',calcRate:'年利率',calcInt:'預計利息',calcInelig:'未達最低存款',
 dpsWarnMsg:'⚠️ 存款金額超過 HK$800,000！建議分散存放於多間銀行，以確保全額受存款保障計劃保障。',
 bestPfx:'最高',hint:'請先選擇你擁有帳戶的銀行 ⬆️',
@@ -274,13 +275,13 @@ search:'搜尋銀行...',lbPromo:'顯示推廣',
 fDisc:'⚠️ <strong>免責聲明：</strong>所示利率僅供參考。推廣利率設有特定條件。存款前請向銀行直接查詢。',
 fSrc:'數據來源：各銀行官方網站、香港經濟日報、HK01、富途、MoneySmart。最後更新：2026年3月。',
 fDps:'🛡️ 所有銀行均持有香港金管局牌照，受<a href="https://www.dps.org.hk/" target="_blank">存款保障計劃</a>保障（每人每銀行最高 HK$800,000）。'},
-en:{title:'🏦 HK Time Deposit <span>Rate Comparison</span>',titleUsd:'🏦 HK USD Time Deposit <span>Rate Comparison</span>',subtitle:'28 banks, updated March 2026',langBtn:'🌐 中文',
+en:{title:'🏦 HK Time Deposit <span>Rate Comparison</span>',titleUsd:'🏦 HK USD Time Deposit <span>Rate Comparison</span>',titleCny:'🏦 HK CNY Time Deposit <span>Rate Comparison</span>',subtitle:'28 banks, updated March 2026',langBtn:'🌐 中文',
 lbUpd:'Updated: ',lbCnt:'Banks: ',lbDps:'Protection: ',dpsAmt:'Up to HK$800,000 per bank',
 tabMine:'🏦 My Banks',tabOther:'🆕 Other Banks',tabAll:'📋 All Banks',
 profBtn:'⚙️ Set Up My Banks',profTitle:'Select banks you have an account with:',
 fundNew:'💰 New Funds',fundExist:'🏦 Existing Funds',fundHint:'New Funds = fresh deposits transferred from other banks, usually higher rates',
-ccyHkd:'🇭🇰 HKD',ccyUsd:'🇺🇸 USD',
-calcTitle:'💰 Deposit Calculator',calcAmtLb:'Amount (HK$)',calcAmtLbUsd:'Amount (US$)',calcTermLb:'Term',calcBtn:'Calculate',
+ccyHkd:'🇭🇰 HKD',ccyUsd:'🇺🇸 USD',ccyCny:'🇨🇳 CNY',
+calcTitle:'💰 Deposit Calculator',calcAmtLb:'Amount (HK$)',calcAmtLbUsd:'Amount (US$)',calcAmtLbCny:'Amount (¥)',calcTermLb:'Term',calcBtn:'Calculate',
 calcRank:'Rank',calcBank:'Bank',calcRate:'Rate (p.a.)',calcInt:'Est. Interest',calcInelig:'Below minimum',
 dpsWarnMsg:'⚠️ Amount exceeds HK$800,000! Consider splitting across multiple banks for full deposit protection coverage.',
 bestPfx:'Best',hint:'Please select your banks above first ⬆️',
@@ -299,7 +300,7 @@ function toggleLang(){lang=lang==='zh'?'en':'zh';applyLang();renderAll();}
 
 function applyLang(){
 const l=L[lang];
-document.getElementById('title').innerHTML=curCcy==='usd'?l.titleUsd:l.title;
+document.getElementById('title').innerHTML=curCcy==='usd'?l.titleUsd:curCcy==='cny'?l.titleCny:l.title;
 document.getElementById('subtitle').textContent=l.subtitle;
 document.getElementById('langBtn').textContent=l.langBtn;
 ['lbUpd','lbCnt','lbDps','dpsAmt'].forEach(k=>{const e=document.getElementById(k);if(e)e.textContent=l[k];});
@@ -311,9 +312,9 @@ document.getElementById('profTitle').textContent=l.profTitle;
 document.getElementById('fundNew').textContent=l.fundNew;
 document.getElementById('fundExist').textContent=l.fundExist;
 document.getElementById('fundHint').textContent=l.fundHint;
-document.querySelectorAll('.ccy-btn').forEach(b=>{if(b.dataset.ccy==='hkd')b.textContent=l.ccyHkd;else b.textContent=l.ccyUsd;});
+document.querySelectorAll('.ccy-btn').forEach(b=>{if(b.dataset.ccy==='hkd')b.textContent=l.ccyHkd;else if(b.dataset.ccy==='usd')b.textContent=l.ccyUsd;else b.textContent=l.ccyCny;});
 document.getElementById('calcTitle').textContent=l.calcTitle;
-document.getElementById('calcAmtLb').textContent=curCcy==='usd'?l.calcAmtLbUsd:l.calcAmtLb;
+document.getElementById('calcAmtLb').textContent=curCcy==='usd'?l.calcAmtLbUsd:curCcy==='cny'?l.calcAmtLbCny:l.calcAmtLb;
 document.getElementById('calcTermLb').textContent=l.calcTermLb;
 document.getElementById('calcBtn').textContent=l.calcBtn;
 document.querySelectorAll('[data-i]').forEach(el=>{const k=el.dataset.i;if(l.cats[el.dataset.cat])el.textContent=l.cats[el.dataset.cat];else if(l.sorts[k])el.textContent=l.sorts[k];});
@@ -410,10 +411,11 @@ renderTable();});
 function renderAll(){applyLang();updateCounts();renderSummary();renderTable();}
 
 function getRates(b){
-// Pick HKD or USD base rates
+// Pick HKD, USD, or CNY base rates
 const isUsd=curCcy==='usd';
-const stdRates=isUsd?(b.usd_rates||b.rates):b.rates;
-const newRates=isUsd?(b.usd_new_fund_rates||b.new_fund_rates||stdRates):(b.new_fund_rates||b.rates);
+const isCny=curCcy==='cny';
+const stdRates=isCny?(b.cny_rates||b.rates):isUsd?(b.usd_rates||b.rates):b.rates;
+const newRates=isCny?(b.cny_new_fund_rates||b.cny_rates||b.rates):isUsd?(b.usd_new_fund_rates||b.new_fund_rates||stdRates):(b.new_fund_rates||b.rates);
 // On My Banks tab, use new_fund_rates or rates based on toggle
 // On Other Banks tab, always show new_fund_rates (you'd be new customer)
 // On All tab, show based on toggle
@@ -490,7 +492,7 @@ const amt=parseFloat(document.getElementById('calcAmt').value.replace(/,/g,''))|
 const term=document.getElementById('calcTerm').value;
 const l=L[lang];
 // DPS warning
-const dpsLimit=curCcy==='usd'?102000:800000;
+const dpsLimit=curCcy==='usd'?102000:curCcy==='cny'?720000:800000;
 const dw=document.getElementById('dpsWarn');
 if(amt>dpsLimit){dw.style.display='block';dw.textContent=l.dpsWarnMsg;}else{dw.style.display='none';}
 // Get banks for current tab
