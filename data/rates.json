@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-29",
-  "data_source": "Compiled from official bank websites + HKET + moneyhk101 (2026-03-29)",
+  "last_updated": "2026-03-30",
+  "data_source": "Compiled from official bank websites + HKET + moneyhk101 (2026-03-30)",
   "disclaimer": "Rates are for reference only. Please verify with individual banks before making deposit decisions. Rates change frequently.",
   "deposit_protection": "Hong Kong Deposit Protection Scheme covers up to HK$800,000 per depositor per bank.",
   "banks": [
@@ -33,27 +33,27 @@
       },
       "usd_rates": {
         "1M": 1.0,
-        "3M": 2.8,
-        "6M": 2.7,
-        "12M": 2.5
+        "3M": 3.0,
+        "6M": 2.9,
+        "12M": 2.8
       },
       "usd_new_fund_rates": {
         "1M": 1.0,
-        "3M": 2.8,
-        "6M": 2.7,
-        "12M": 2.5
+        "3M": 3.2,
+        "6M": 3.1,
+        "12M": 3.0
       },
       "cny_rates": {
+        "1M": 1.0,
+        "3M": 1.0,
+        "6M": 1.0,
+        "12M": 1.0
+      },
+      "cny_new_fund_rates": {
         "1M": 1.0,
         "3M": 1.3,
         "6M": 1.3,
         "12M": 1.3
-      },
-      "cny_new_fund_rates": {
-        "1M": 1.0,
-        "3M": 1.9,
-        "6M": 2.0,
-        "12M": 2.1
       }
     },
     {
@@ -125,7 +125,7 @@
           "note": "New mobile account opening, max HK$100,000"
         }
       },
-      "notes": "Official: New fund HKD 3M=2.10%, 6M=1.90%. Exchange fund 1W=5.0%, 1M=2.0%.",
+      "notes": "HKET: Exchange fund 1W=5.0%, 1M=2.0%. New fund: 3M=2.1, 6M=1.9.",
       "new_fund_rates": {
         "1M": 2.0,
         "3M": 2.1,
@@ -134,17 +134,17 @@
       },
       "usd_rates": {
         "1M": 1.5,
-        "3M": 2.8,
-        "6M": 2.7,
-        "12M": null
+        "3M": 3.0,
+        "6M": 3.1,
+        "12M": 2.7
       },
       "usd_new_fund_rates": {
         "1M": 1.5,
         "3M": 3.0,
-        "6M": 2.9,
-        "12M": null
+        "6M": 3.1,
+        "12M": 2.7
       },
-      "source": "official+hket",
+      "source": "hket",
       "cny_rates": {
         "1M": null,
         "3M": 1.2,
@@ -233,7 +233,7 @@
           "note": "Promotional"
         }
       },
-      "notes": "HKET: 6.88% FX (1W). Standard via mobile HK$500k+: 1M-12M shown.",
+      "notes": "HKET: 6.88% FX (1W). Standard via mobile HK$500k+.",
       "new_fund_rates": {
         "1M": 2.05,
         "3M": 2.45,
@@ -372,17 +372,17 @@
       "min_deposit": "HK$10,000",
       "url": "https://www.publicbank.com.hk/",
       "rates": {
-        "1M": 1.8,
-        "3M": 2.3,
-        "6M": 2.15,
-        "12M": 2.2
+        "1M": 2.2,
+        "3M": 2.35,
+        "6M": 2.35,
+        "12M": 2.5
       },
-      "notes": "High-rate tier for HK$500,000+",
+      "notes": "HKET: Mobile +0.15%. HK$500k+: 3M=2.35, 6M=2.35, 12M=2.5.",
       "new_fund_rates": {
-        "1M": 1.8,
-        "3M": 2.3,
-        "6M": 2.15,
-        "12M": 2.2
+        "1M": 2.2,
+        "3M": 2.35,
+        "6M": 2.35,
+        "12M": 2.5
       },
       "usd_rates": {
         "1M": null,
@@ -407,7 +407,8 @@
         "3M": null,
         "6M": null,
         "12M": null
-      }
+      },
+      "source": "hket"
     },
     {
       "bank": "Shanghai Commercial Bank",
@@ -417,17 +418,17 @@
       "min_deposit": "HK$1,000",
       "url": "https://www.shacombank.com.hk/",
       "rates": {
-        "1M": 1.58,
-        "3M": 2.38,
-        "6M": 2.48,
-        "12M": 1.88
+        "1M": 1.53,
+        "3M": 2.08,
+        "6M": 2.03,
+        "12M": 1.63
       },
-      "notes": "Low min deposit of HK$1,000",
+      "notes": "HKET: Online/mobile. 1M=1.53, 3M=2.08, 6M=2.03, 12M=1.63.",
       "new_fund_rates": {
-        "1M": 1.58,
-        "3M": 2.38,
-        "6M": 2.48,
-        "12M": 1.88
+        "1M": 1.53,
+        "3M": 2.08,
+        "6M": 2.03,
+        "12M": 1.63
       },
       "usd_rates": {
         "1M": null,
@@ -452,7 +453,8 @@
         "3M": 1.8,
         "6M": 2.0,
         "12M": 2.2
-      }
+      },
+      "source": "hket"
     },
     {
       "bank": "Chong Hing Bank",
@@ -462,17 +464,17 @@
       "min_deposit": "HK$5,000",
       "url": "https://www.chbank.com/",
       "rates": {
-        "1M": 1.8,
-        "3M": 2.05,
-        "6M": 1.5,
-        "12M": 1.5
+        "1M": 1.7,
+        "3M": 2.15,
+        "6M": 1.65,
+        "12M": 0.95
       },
-      "notes": "",
+      "notes": "HKET: 雲利率 e-banking rates. New customer 2.35% (3M).",
       "new_fund_rates": {
-        "1M": 1.8,
-        "3M": 2.05,
-        "6M": 1.5,
-        "12M": 1.5
+        "1M": 1.7,
+        "3M": 2.15,
+        "6M": 1.65,
+        "12M": 0.95
       },
       "usd_rates": {
         "1M": 0.25,
@@ -497,7 +499,8 @@
         "3M": 0.35,
         "6M": 0.35,
         "12M": 0.35
-      }
+      },
+      "source": "hket"
     },
     {
       "bank": "Chiyu Banking",
@@ -567,11 +570,11 @@
           "note": "Promotional, last call"
         }
       },
-      "notes": "HKET: New fund 3M=2.05, 6M=2.4 (HK$500k+). Opening promo up to 6.0%.",
+      "notes": "HKET: New fund 3M=2.05. 500k+ promo: 4M&6M=2.4%. Opening promo up to 6.0%.",
       "new_fund_rates": {
         "1M": 1.4,
         "3M": 2.05,
-        "6M": 2.4,
+        "6M": 1.9,
         "12M": 1.9
       },
       "usd_rates": {
@@ -623,12 +626,12 @@
           "note": "Citigold"
         }
       },
-      "notes": "Citigold preferential rates shown",
+      "notes": "HKET: Existing customer: 1M=2.0, 3M=2.2, 6M=1.65, 12M=1.7. New customer Citigold up to 4.3%.",
       "new_fund_rates": {
         "1M": 2.0,
         "3M": 2.2,
-        "6M": 2.0,
-        "12M": 1.8
+        "6M": 1.65,
+        "12M": 1.7
       },
       "usd_rates": {
         "1M": null,
@@ -653,7 +656,8 @@
         "3M": 1.8,
         "6M": 1.9,
         "12M": 2.0
-      }
+      },
+      "source": "hket"
     },
     {
       "bank": "OCBC Wing Hang",
@@ -663,17 +667,17 @@
       "min_deposit": "HK$10,000",
       "url": "https://www.ocbc.com/group/gateway.page",
       "rates": {
-        "1M": 1.8,
-        "3M": 2.1,
-        "6M": 2.0,
-        "12M": 1.9
+        "1M": 1.85,
+        "3M": 2.2,
+        "6M": 2.45,
+        "12M": 2.52
       },
-      "notes": "",
+      "notes": "HKET: New fund 10万+: 1M=1.85, 3M=2.2, 6M=2.45, 12M=2.52.",
       "new_fund_rates": {
-        "1M": 1.8,
-        "3M": 2.1,
-        "6M": 2.0,
-        "12M": 1.9
+        "1M": 1.85,
+        "3M": 2.2,
+        "6M": 2.45,
+        "12M": 2.52
       },
       "usd_rates": {
         "1M": null,
@@ -698,7 +702,8 @@
         "3M": null,
         "6M": null,
         "12M": null
-      }
+      },
+      "source": "hket"
     },
     {
       "bank": "CCB (Asia)",
@@ -719,12 +724,12 @@
           "note": "New customer/new fund, last call"
         }
       },
-      "notes": "Aggressive new customer promo rates",
+      "notes": "HKET: e-Account opening 12% (1M). New fund (100万+): 3M=2.35, 6M=2.35, 12M=2.35.",
       "new_fund_rates": {
-        "1M": 2.15,
-        "3M": 2.45,
-        "6M": 2.1,
-        "12M": 1.9
+        "1M": 1.85,
+        "3M": 2.35,
+        "6M": 2.35,
+        "12M": 2.35
       },
       "usd_rates": {
         "1M": 2.9,
@@ -749,7 +754,8 @@
         "3M": 2.15,
         "6M": 2.25,
         "12M": 2.3
-      }
+      },
+      "source": "hket"
     },
     {
       "bank": "Nanyang Commercial Bank",
@@ -770,12 +776,12 @@
           "note": "Promotional"
         }
       },
-      "notes": "Min HK$100,000 for standard rates",
+      "notes": "HKET: 6.8% FX (1W). Electronic new fund: 1M=2.15, 3M=2.3, 6M=2.4, 12M=2.3.",
       "new_fund_rates": {
         "1M": 2.15,
-        "3M": 2.55,
-        "6M": 2.45,
-        "12M": 2.4
+        "3M": 2.3,
+        "6M": 2.4,
+        "12M": 2.3
       },
       "usd_rates": {
         "1M": null,
@@ -800,7 +806,8 @@
         "3M": 2.25,
         "6M": 2.35,
         "12M": 2.4
-      }
+      },
+      "source": "hket"
     },
     {
       "bank": "ICBC (Asia)",
@@ -811,9 +818,9 @@
       "url": "https://www.icbcasia.com/",
       "rates": {
         "1M": 0.15,
-        "3M": 2.1,
-        "6M": 2.05,
-        "12M": 1.85
+        "3M": 2.25,
+        "6M": 2.2,
+        "12M": 2.0
       },
       "promo_rates": {
         "3M": {
@@ -825,12 +832,12 @@
           "note": "98-day term"
         }
       },
-      "notes": "e-Account special at 3.8%",
+      "notes": "HKET: e-Account 3.8% (3M). Wealth客戶(300万+): 3M=2.25, 6M=2.2, 12M=2.0.",
       "new_fund_rates": {
-        "1M": 1.4,
+        "1M": 1.65,
         "3M": 2.25,
-        "6M": 2.25,
-        "12M": 1.95
+        "6M": 2.2,
+        "12M": 2.0
       },
       "usd_rates": {
         "1M": 3.3,
@@ -855,7 +862,8 @@
         "3M": 2.2,
         "6M": 2.3,
         "12M": 2.4
-      }
+      },
+      "source": "hket"
     },
     {
       "bank": "CITIC Bank International",
@@ -865,17 +873,17 @@
       "min_deposit": "HK$10,000",
       "url": "https://www.citic.com/",
       "rates": {
-        "1M": 1.8,
-        "3M": 2.1,
-        "6M": 2.0,
-        "12M": 2.0
+        "1M": 1.7,
+        "3M": 2.15,
+        "6M": 2.25,
+        "12M": 2.37
       },
-      "notes": "",
+      "notes": "HKET: New fund: 3M=2.18, 6M=2.35, 12M=2.52. CITICfirst 12M=2.52.",
       "new_fund_rates": {
-        "1M": 2.1,
-        "3M": 2.38,
-        "6M": 2.2,
-        "12M": 2.2
+        "1M": 1.85,
+        "3M": 2.18,
+        "6M": 2.35,
+        "12M": 2.52
       },
       "usd_rates": {
         "1M": null,
@@ -900,7 +908,8 @@
         "3M": 2.0,
         "6M": 2.1,
         "12M": 2.2
-      }
+      },
+      "source": "hket"
     },
     {
       "bank": "Bank of Communications (HK)",
@@ -915,12 +924,12 @@
         "6M": 0.275,
         "12M": 0.3
       },
-      "notes": "",
+      "notes": "HKET: 理財客戶 new fund: 1M=1.8, 3M=2.2. E-channel: 3M=1.9, 6M=2.25, 12M=2.0.",
       "new_fund_rates": {
-        "1M": 1.7,
-        "3M": 1.95,
-        "6M": 2.05,
-        "12M": 1.9
+        "1M": 1.8,
+        "3M": 2.2,
+        "6M": 2.25,
+        "12M": 2.0
       },
       "usd_rates": {
         "1M": null,
@@ -945,7 +954,8 @@
         "3M": 1.8,
         "6M": 2.2,
         "12M": 2.2
-      }
+      },
+      "source": "hket"
     },
     {
       "bank": "CMB Wing Lung Bank",
@@ -955,17 +965,17 @@
       "min_deposit": "HK$10,000",
       "url": "https://www.cmbwinglungbank.com/",
       "rates": {
-        "1M": 1.5,
-        "3M": 1.85,
-        "6M": 2.05,
+        "1M": 1.3,
+        "3M": 1.9,
+        "6M": 2.1,
         "12M": 2.15
       },
-      "notes": "",
+      "notes": "HKET: Mobile banking. 1M=1.3, 3M=1.9, 6M=2.1, 9M=2.15, 12M=2.15.",
       "new_fund_rates": {
-        "1M": 1.65,
-        "3M": 2.05,
-        "6M": 2.25,
-        "12M": 2.25
+        "1M": 1.3,
+        "3M": 1.9,
+        "6M": 2.1,
+        "12M": 2.15
       },
       "usd_rates": {
         "1M": 3.0,
@@ -990,7 +1000,8 @@
         "3M": 2.0,
         "6M": 2.25,
         "12M": 2.35
-      }
+      },
+      "source": "hket"
     },
     {
       "bank": "Fusion Bank",
@@ -1015,7 +1026,7 @@
           "note": "Existing customer promo"
         }
       },
-      "notes": "HKET: New customer flash 25% (2W). Standard: 1M=1.7, 3M=2.2, 6M=2.3, 12M=2.6.",
+      "notes": "HKET: Flash Mon 25% (new customer 2W). Standard: 1M=1.7, 3M=2.2, 6M=2.3, 12M=2.6.",
       "new_fund_rates": {
         "1M": 1.7,
         "3M": 2.2,
