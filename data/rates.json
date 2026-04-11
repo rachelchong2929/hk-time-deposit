@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-06",
-  "data_source": "Compiled from official bank websites + HKET + moneyhk101 (2026-04-06)",
+  "last_updated": "2026-04-11",
+  "data_source": "Compiled from official bank websites + HKET + moneyhk101 (2026-04-11)",
   "disclaimer": "Rates are for reference only. Please verify with individual banks before making deposit decisions. Rates change frequently.",
   "deposit_protection": "Hong Kong Deposit Protection Scheme covers up to HK$800,000 per depositor per bank.",
   "banks": [
@@ -20,7 +20,7 @@
       "promo_rates": {
         "1M": {
           "rate": 10.0,
-          "note": "Trading Hub customers, exchange fund"
+          "note": "Trading Hub customers, exchange fund, max HK$10K-400K"
         }
       },
       "notes": "HSBC official: HKD std 1M=0.1, 3M=0.125, USD 1M=0.125, 3M=0.15. CNY 1M=0.25, 3M=0.3. moneyhk101 Apr5: USD new fund 1M=2.8, 3M=4.1, 6M=3.9, 12M=3.4. CNY new fund 1M=1.5, 12M=1.8.",
@@ -38,10 +38,10 @@
         "12M": 0.225
       },
       "usd_new_fund_rates": {
-        "1M": 2.8,
-        "3M": 4.1,
-        "6M": 3.9,
-        "12M": 3.4
+        "1M": 2.5,
+        "3M": 4.6,
+        "6M": 4.5,
+        "12M": 4.3
       },
       "cny_rates": {
         "1M": 0.25,
@@ -50,10 +50,10 @@
         "12M": 0.35
       },
       "cny_new_fund_rates": {
-        "1M": 1.5,
-        "3M": 1.3,
-        "6M": 1.3,
-        "12M": 1.8
+        "1M": 1.8,
+        "3M": 2.5,
+        "6M": 2.45,
+        "12M": 2.5
       }
     },
     {
@@ -83,10 +83,10 @@
         "12M": 2.6
       },
       "usd_new_fund_rates": {
-        "1M": 2.5,
-        "3M": 3.95,
-        "6M": 3.8,
-        "12M": 4.05
+        "1M": 2.1,
+        "3M": 4.5,
+        "6M": 4.25,
+        "12M": 4.0
       },
       "source": "hket+moneyhk101",
       "cny_rates": {
@@ -96,10 +96,10 @@
         "12M": null
       },
       "cny_new_fund_rates": {
-        "1M": 1.2,
-        "3M": 2.1,
-        "6M": 2.2,
-        "12M": 2.1
+        "1M": 1.4,
+        "3M": 2.3,
+        "6M": 2.25,
+        "12M": 2.15
       }
     },
     {
@@ -119,10 +119,6 @@
         "7D": {
           "rate": 5.0,
           "note": "Exchange fund, min HK$50,000"
-        },
-        "1M": {
-          "rate": 4.8,
-          "note": "New mobile account opening, max HK$100,000"
         }
       },
       "notes": "BOCHK official 7Mar: New fund HKD 3M=2.1, 6M=1.9. USD PW new fund 3M=3.0, 6M=2.9. CNY PW 3M=1.4, 6M=1.45, 12M=1.5. FX exchange: USD 1M=4.0, CNY 1M=3.5. moneyhk101 Apr5: USD 1M=3.0, 3M=3.9. CNY 1M=1.7, 3M=2.3.",
@@ -139,23 +135,23 @@
         "12M": 2.6
       },
       "usd_new_fund_rates": {
-        "1M": 3.0,
-        "3M": 3.9,
-        "6M": 3.7,
-        "12M": 3.7
+        "1M": 2.4,
+        "3M": 4.45,
+        "6M": 4.35,
+        "12M": 4.05
       },
       "source": "official+moneyhk101",
       "cny_rates": {
         "1M": null,
         "3M": 1.2,
-        "6M": 1.25,
-        "12M": 1.3
+        "6M": 1.2,
+        "12M": 1.0
       },
       "cny_new_fund_rates": {
-        "1M": 1.7,
-        "3M": 2.3,
-        "6M": 2.35,
-        "12M": 2.3
+        "1M": 1.9,
+        "3M": 2.45,
+        "6M": 2.4,
+        "12M": 2.4
       }
     },
     {
@@ -185,29 +181,29 @@
         "12M": 2.0
       },
       "usd_rates": {
-        "1M": 3.1,
-        "3M": 3.5,
-        "6M": 3.4,
-        "12M": 3.3
+        "1M": 0.15,
+        "3M": 2.5,
+        "6M": 2.4,
+        "12M": 2.3
       },
       "usd_new_fund_rates": {
-        "1M": 2.6,
-        "3M": 4.0,
-        "6M": 3.85,
-        "12M": 3.5
+        "1M": 2.3,
+        "3M": 4.55,
+        "6M": 4.4,
+        "12M": 4.1
       },
       "source": "hket+moneyhk101",
       "cny_rates": {
         "1M": null,
-        "3M": 1.0,
-        "6M": 1.1,
-        "12M": 1.2
+        "3M": 0.8,
+        "6M": 0.8,
+        "12M": 0.8
       },
       "cny_new_fund_rates": {
-        "1M": 1.4,
-        "3M": 1.9,
-        "6M": 2.0,
-        "12M": 2.15
+        "1M": 1.75,
+        "3M": 2.4,
+        "6M": 2.35,
+        "12M": 2.3
       }
     },
     {
@@ -218,9 +214,9 @@
       "min_deposit": "HK$10,000 (standard) / HK$500,000 (high-rate)",
       "url": "https://www.fubonbank.com.hk/",
       "rates": {
-        "1M": 2.05,
-        "3M": 2.45,
-        "6M": 2.45,
+        "1M": 1.95,
+        "3M": 2.35,
+        "6M": 2.35,
         "12M": 2.5
       },
       "promo_rates": {
@@ -235,35 +231,35 @@
       },
       "notes": "HKET: 6.88% FX (1W). moneyhk101 Apr5: USD new fund 1M=4.6, 3M=4.8, 6M=4.75, 12M=4.2. CNY 1M=2.4, 3M=2.8, 6M=2.65, 12M=2.45.",
       "new_fund_rates": {
-        "1M": 2.05,
-        "3M": 2.45,
-        "6M": 2.45,
+        "1M": 1.95,
+        "3M": 2.35,
+        "6M": 2.35,
         "12M": 2.5
       },
       "usd_rates": {
-        "1M": 2.3,
-        "3M": 3.4,
-        "6M": 3.3,
-        "12M": 3.15
+        "1M": 3.5,
+        "3M": 4.0,
+        "6M": 3.8,
+        "12M": 3.5
       },
       "usd_new_fund_rates": {
         "1M": 4.6,
-        "3M": 4.8,
-        "6M": 4.75,
-        "12M": 4.2
+        "3M": 5.2,
+        "6M": 5.0,
+        "12M": 4.7
       },
       "source": "hket+moneyhk101",
       "cny_rates": {
-        "1M": 1.2,
-        "3M": 1.3,
-        "6M": 1.4,
-        "12M": 1.4
+        "1M": 1.5,
+        "3M": 2.0,
+        "6M": 1.8,
+        "12M": 1.5
       },
       "cny_new_fund_rates": {
-        "1M": 2.4,
-        "3M": 2.8,
-        "6M": 2.65,
-        "12M": 2.45
+        "1M": 2.6,
+        "3M": 2.9,
+        "6M": 2.8,
+        "12M": 2.65
       }
     },
     {
@@ -276,40 +272,40 @@
       "rates": {
         "1M": null,
         "3M": 2.0,
-        "6M": 2.1,
-        "12M": 1.9
+        "6M": 2.2,
+        "12M": 2.3
       },
       "notes": "HKET: 顯卓理財 new fund 3M=2.15, 6M=2.25, 12M=2.05. moneyhk101 Apr5: USD 3M=4.45, 6M=4.0, 12M=3.6. CNY 6M=1.9, 12M=2.0.",
       "new_fund_rates": {
         "1M": null,
         "3M": 2.15,
-        "6M": 2.25,
-        "12M": 2.05
+        "6M": 2.35,
+        "12M": 2.45
       },
       "usd_rates": {
-        "1M": 2.75,
-        "3M": 3.4,
-        "6M": 3.2,
-        "12M": 2.9
+        "1M": 1.5,
+        "3M": 3.0,
+        "6M": 2.8,
+        "12M": 2.5
       },
       "usd_new_fund_rates": {
-        "1M": 2.75,
-        "3M": 4.45,
-        "6M": 4.0,
-        "12M": 3.6
+        "1M": 2.2,
+        "3M": 4.35,
+        "6M": 4.15,
+        "12M": 3.9
       },
       "source": "hket+moneyhk101",
       "cny_rates": {
         "1M": null,
-        "3M": 1.0,
-        "6M": 1.0,
-        "12M": 1.0
+        "3M": 1.5,
+        "6M": 1.5,
+        "12M": 1.3
       },
       "cny_new_fund_rates": {
-        "1M": null,
-        "3M": 1.2,
-        "6M": 1.9,
-        "12M": 2.0
+        "1M": 1.35,
+        "3M": 2.35,
+        "6M": 2.2,
+        "12M": 2.1
       }
     },
     {
@@ -321,8 +317,8 @@
       "url": "https://www.dahsing.com/",
       "rates": {
         "1M": null,
-        "3M": 2.05,
-        "6M": 2.2,
+        "3M": 2.1,
+        "6M": 2.3,
         "12M": null
       },
       "promo_rates": {
@@ -334,9 +330,9 @@
       "notes": "HKET: New deposit customer 12M=2.8%. VIP new fund: 3M=2.15, 6M=2.3.",
       "new_fund_rates": {
         "1M": null,
-        "3M": 2.15,
-        "6M": 2.3,
-        "12M": 2.8
+        "3M": 2.2,
+        "6M": 2.5,
+        "12M": 2.6
       },
       "usd_rates": {
         "1M": null,
@@ -372,41 +368,41 @@
       "min_deposit": "HK$10,000",
       "url": "https://www.publicbank.com.hk/",
       "rates": {
-        "1M": 2.2,
-        "3M": 2.35,
-        "6M": 2.35,
-        "12M": 2.5
+        "1M": 1.8,
+        "3M": 2.05,
+        "6M": 2.1,
+        "12M": 2.4
       },
       "notes": "HKET: Mobile +0.15%. moneyhk101 Apr1: USD 3M=5.0, 6M=4.9, 12M=4.7. CNY 1M=0.5.",
       "new_fund_rates": {
-        "1M": 2.2,
-        "3M": 2.35,
-        "6M": 2.35,
-        "12M": 2.5
+        "1M": 1.8,
+        "3M": 2.15,
+        "6M": 2.2,
+        "12M": 2.4
       },
       "usd_rates": {
-        "1M": null,
-        "3M": 5.0,
-        "6M": 4.9,
-        "12M": 4.7
+        "1M": 2.0,
+        "3M": 3.0,
+        "6M": 2.8,
+        "12M": 2.5
       },
       "usd_new_fund_rates": {
         "1M": null,
-        "3M": 5.0,
-        "6M": 4.9,
-        "12M": 4.7
+        "3M": 4.85,
+        "6M": null,
+        "12M": null
       },
       "cny_rates": {
         "1M": null,
-        "3M": null,
-        "6M": null,
-        "12M": null
+        "3M": 1.5,
+        "6M": 1.5,
+        "12M": 1.3
       },
       "cny_new_fund_rates": {
-        "1M": 0.5,
-        "3M": null,
-        "6M": null,
-        "12M": null
+        "1M": null,
+        "3M": 2.65,
+        "6M": 2.3,
+        "12M": 2.2
       },
       "source": "hket+moneyhk101"
     },
@@ -418,17 +414,17 @@
       "min_deposit": "HK$1,000",
       "url": "https://www.shacombank.com.hk/",
       "rates": {
-        "1M": 1.53,
-        "3M": 2.08,
-        "6M": 2.03,
-        "12M": 1.63
+        "1M": 1.48,
+        "3M": 2.03,
+        "6M": 2.28,
+        "12M": 1.93
       },
       "notes": "HKET: Online/mobile. 1M=1.53, 3M=2.08, 6M=2.03, 12M=1.63. moneyhk101 Apr5: USD 6M=4.1.",
       "new_fund_rates": {
-        "1M": 1.53,
-        "3M": 2.08,
-        "6M": 2.03,
-        "12M": 1.63
+        "1M": 1.48,
+        "3M": 2.03,
+        "6M": 2.28,
+        "12M": 1.93
       },
       "usd_rates": {
         "1M": null,
@@ -510,17 +506,17 @@
       "min_deposit": "HK$10,000",
       "url": "https://www.chiyubank.com/",
       "rates": {
-        "1M": 2.0,
-        "3M": 2.1,
-        "6M": 2.0,
-        "12M": 1.9
+        "1M": 2.08,
+        "3M": 2.2,
+        "6M": 2.2,
+        "12M": 2.0
       },
       "notes": "moneyhk101 Apr1: USD 1M=4.15, 3M=4.70.",
       "new_fund_rates": {
-        "1M": 2.0,
-        "3M": 2.1,
-        "6M": 2.0,
-        "12M": 1.9
+        "1M": 2.08,
+        "3M": 2.2,
+        "6M": 2.2,
+        "12M": 2.0
       },
       "usd_rates": {
         "1M": 3.1,
@@ -574,34 +570,34 @@
       "notes": "HKET: New fund 3M=2.05. DBS promo up to 3.3%. moneyhk101 Apr5: USD new fund 1M=3.3, 3M=4.85, 6M=4.7, 12M=4.5.",
       "new_fund_rates": {
         "1M": 1.4,
-        "3M": 2.05,
-        "6M": 1.9,
-        "12M": 1.9
+        "3M": 2.1,
+        "6M": 2.4,
+        "12M": 1.95
       },
       "usd_rates": {
-        "1M": 1.5,
-        "3M": 3.8,
-        "6M": 3.4,
-        "12M": 3.0
+        "1M": 0.2,
+        "3M": 2.5,
+        "6M": 2.4,
+        "12M": 2.3
       },
       "usd_new_fund_rates": {
-        "1M": 3.3,
-        "3M": 4.85,
-        "6M": 4.7,
-        "12M": 4.5
+        "1M": 2.0,
+        "3M": 4.0,
+        "6M": 4.05,
+        "12M": 3.8
       },
       "source": "hket+moneyhk101",
       "cny_rates": {
-        "1M": 0.5,
-        "3M": 1.2,
-        "6M": 1.2,
-        "12M": 0.95
+        "1M": null,
+        "3M": 1.0,
+        "6M": 1.0,
+        "12M": 0.8
       },
       "cny_new_fund_rates": {
-        "1M": 0.5,
-        "3M": 1.1,
-        "6M": 1.0,
-        "12M": 0.95
+        "1M": 1.2,
+        "3M": 2.2,
+        "6M": 2.1,
+        "12M": 2.0
       }
     },
     {
@@ -612,10 +608,10 @@
       "min_deposit": "HK$50,000",
       "url": "https://www.citibank.com.hk/",
       "rates": {
-        "1M": 0.15,
-        "3M": 0.2,
-        "6M": 0.2,
-        "12M": 0.2
+        "1M": 2.1,
+        "3M": 2.3,
+        "6M": 1.5,
+        "12M": 1.6
       },
       "promo_rates": {
         "3M": {
@@ -629,8 +625,8 @@
       },
       "notes": "HKET: Existing 1M=2.0, 3M=2.2. moneyhk101: USD 1M=3.75 (Treasury Plus), 6M=3.44. Citigold up to 4.3%.",
       "new_fund_rates": {
-        "1M": 2.0,
-        "3M": 2.2,
+        "1M": 2.1,
+        "3M": 3.0,
         "6M": 1.65,
         "12M": 1.7
       },
@@ -715,9 +711,9 @@
       "url": "https://www.asia.ccb.com/",
       "rates": {
         "1M": 0.15,
-        "3M": 2.2,
-        "6M": 2.0,
-        "12M": 1.9
+        "3M": 2.15,
+        "6M": 2.15,
+        "12M": 2.15
       },
       "promo_rates": {
         "1M": {
@@ -728,33 +724,33 @@
       "notes": "HKET: e-Account 12% HKD (1M). moneyhk101 Apr5: USD 1M=4.3, 3M=4.75, 6M=4.5. CNY 1M=6.0 (promo), 3M=2.6.",
       "new_fund_rates": {
         "1M": 1.85,
-        "3M": 2.35,
-        "6M": 2.35,
-        "12M": 2.35
+        "3M": 2.2,
+        "6M": 2.2,
+        "12M": 2.2
       },
       "usd_rates": {
-        "1M": 3.45,
-        "3M": 3.55,
-        "6M": null,
-        "12M": 3.2
+        "1M": 2.5,
+        "3M": 3.5,
+        "6M": 3.3,
+        "12M": 3.0
       },
       "usd_new_fund_rates": {
-        "1M": 4.3,
-        "3M": 4.75,
-        "6M": 4.5,
-        "12M": 3.2
+        "1M": 4.0,
+        "3M": 4.95,
+        "6M": 4.75,
+        "12M": 4.2
       },
       "cny_rates": {
         "1M": 1.0,
-        "3M": 1.1,
-        "6M": 1.1,
-        "12M": 1.1
+        "3M": 1.5,
+        "6M": 1.5,
+        "12M": 1.2
       },
       "cny_new_fund_rates": {
-        "1M": 6.0,
+        "1M": 2.2,
         "3M": 2.6,
-        "6M": 1.35,
-        "12M": 1.3
+        "6M": 2.6,
+        "12M": 2.45
       },
       "source": "hket+moneyhk101"
     },
@@ -797,16 +793,16 @@
         "12M": 4.0
       },
       "cny_rates": {
-        "1M": 0.8,
-        "3M": 1.0,
-        "6M": 1.1,
+        "1M": 1.0,
+        "3M": 1.5,
+        "6M": 1.3,
         "12M": 1.2
       },
       "cny_new_fund_rates": {
-        "1M": 2.5,
-        "3M": 2.65,
-        "6M": 2.7,
-        "12M": 2.5
+        "1M": 2.15,
+        "3M": null,
+        "6M": null,
+        "12M": null
       },
       "source": "hket+moneyhk101"
     },
@@ -819,9 +815,9 @@
       "url": "https://www.icbcasia.com/",
       "rates": {
         "1M": 0.15,
-        "3M": 2.25,
+        "3M": 2.2,
         "6M": 2.2,
-        "12M": 2.0
+        "12M": 2.2
       },
       "promo_rates": {
         "3M": {
@@ -835,34 +831,34 @@
       },
       "notes": "HKET: e-Account 3.8% (3M). moneyhk101 Apr5: USD 1M=3.8, 3M=4.65, 6M=4.55, 12M=4.15. CNY 1M=2.2, 3M=2.7, 6M=2.6, 12M=2.4.",
       "new_fund_rates": {
-        "1M": 1.65,
+        "1M": 1.6,
         "3M": 2.25,
-        "6M": 2.2,
-        "12M": 2.0
+        "6M": 2.25,
+        "12M": 2.25
       },
       "usd_rates": {
-        "1M": 3.3,
-        "3M": 3.7,
-        "6M": 3.65,
-        "12M": 3.45
+        "1M": 2.0,
+        "3M": 3.2,
+        "6M": 3.0,
+        "12M": 2.8
       },
       "usd_new_fund_rates": {
-        "1M": 3.8,
-        "3M": 4.65,
-        "6M": 4.55,
-        "12M": 4.15
+        "1M": 4.2,
+        "3M": 4.75,
+        "6M": 4.65,
+        "12M": 4.5
       },
       "cny_rates": {
-        "1M": 0.7,
-        "3M": 1.05,
-        "6M": 1.15,
-        "12M": 1.25
+        "1M": 1.2,
+        "3M": 1.8,
+        "6M": 1.6,
+        "12M": 1.5
       },
       "cny_new_fund_rates": {
-        "1M": 2.2,
-        "3M": 2.7,
-        "6M": 2.6,
-        "12M": 2.4
+        "1M": 2.3,
+        "3M": 2.8,
+        "6M": 2.7,
+        "12M": 2.6
       },
       "source": "hket+moneyhk101"
     },
@@ -877,38 +873,38 @@
         "1M": 1.7,
         "3M": 2.15,
         "6M": 2.25,
-        "12M": 2.37
+        "12M": 2.42
       },
       "notes": "HKET: CITICfirst 12M=2.52. moneyhk101 Apr5: USD 1M=3.95, 3M=4.55, 6M=4.4, 12M=4.1. CNY 1M=5.5 (promo), 3M=2.5, 6M=2.45.",
       "new_fund_rates": {
         "1M": 1.85,
-        "3M": 2.18,
-        "6M": 2.35,
-        "12M": 2.52
+        "3M": 2.2,
+        "6M": 2.3,
+        "12M": 2.47
       },
       "usd_rates": {
-        "1M": null,
-        "3M": 3.0,
-        "6M": 2.9,
-        "12M": 2.7
+        "1M": 3.0,
+        "3M": 3.8,
+        "6M": 3.5,
+        "12M": 3.3
       },
       "usd_new_fund_rates": {
-        "1M": 3.95,
-        "3M": 4.55,
-        "6M": 4.4,
-        "12M": 4.1
+        "1M": 4.4,
+        "3M": 5.05,
+        "6M": 4.85,
+        "12M": 4.6
       },
       "cny_rates": {
-        "1M": null,
-        "3M": 1.1,
-        "6M": 1.1,
-        "12M": 1.1
+        "1M": 1.5,
+        "3M": 2.0,
+        "6M": 1.8,
+        "12M": 1.8
       },
       "cny_new_fund_rates": {
-        "1M": 5.5,
-        "3M": 2.5,
-        "6M": 2.45,
-        "12M": 1.35
+        "1M": 2.4,
+        "3M": 2.75,
+        "6M": 2.65,
+        "12M": 2.7
       },
       "source": "hket+moneyhk101"
     },
@@ -927,10 +923,10 @@
       },
       "notes": "HKET: 理財客戶 new fund: 1M=1.8, 3M=2.2. E-channel: 3M=1.9, 6M=2.25, 12M=2.0.",
       "new_fund_rates": {
-        "1M": 1.8,
+        "1M": 1.85,
         "3M": 2.2,
         "6M": 2.25,
-        "12M": 2.0
+        "12M": 2.1
       },
       "usd_rates": {
         "1M": null,
@@ -966,17 +962,17 @@
       "min_deposit": "HK$10,000",
       "url": "https://www.cmbwinglungbank.com/",
       "rates": {
-        "1M": 1.3,
-        "3M": 1.9,
-        "6M": 2.1,
-        "12M": 2.15
+        "1M": 1.15,
+        "3M": 1.65,
+        "6M": 2.0,
+        "12M": 2.0
       },
       "notes": "HKET: Mobile banking. moneyhk101 Apr5: USD 1M=4.4, 3M=4.9, 6M=4.75. CNY 1M=1.8, 3M=2.2, 6M=2.4, 12M=2.25.",
       "new_fund_rates": {
-        "1M": 1.3,
-        "3M": 1.9,
-        "6M": 2.1,
-        "12M": 2.15
+        "1M": 1.15,
+        "3M": 1.65,
+        "6M": 2.0,
+        "12M": 2.0
       },
       "usd_rates": {
         "1M": 3.0,
@@ -1012,10 +1008,10 @@
       "min_deposit": "No minimum",
       "url": "https://www.fusionbank.com/",
       "rates": {
-        "1M": 1.7,
+        "1M": 1.6,
         "3M": 2.2,
         "6M": 2.3,
-        "12M": 2.6
+        "12M": 2.7
       },
       "promo_rates": {
         "7D": {
@@ -1029,10 +1025,10 @@
       },
       "notes": "HKET: Flash Mon 25% (new customer 2W). moneyhk101 Apr5: USD 1M=3.5, 12M=4.25. CNY 1M=2.0, 3M=2.3, 6M=2.3, 12M=2.55.",
       "new_fund_rates": {
-        "1M": 1.7,
+        "1M": 1.6,
         "3M": 2.2,
         "6M": 2.3,
-        "12M": 2.6
+        "12M": 2.7
       },
       "usd_rates": {
         "1M": 1.7,
@@ -1139,29 +1135,29 @@
         "12M": 2.01
       },
       "usd_rates": {
-        "1M": 3.3,
-        "3M": 3.55,
-        "6M": 3.4,
-        "12M": 3.1
+        "1M": 2.0,
+        "3M": 2.5,
+        "6M": 2.3,
+        "12M": 2.0
       },
       "usd_new_fund_rates": {
-        "1M": 4.2,
-        "3M": 4.65,
-        "6M": 3.4,
-        "12M": 4.1
+        "1M": 3.5,
+        "3M": null,
+        "6M": 3.8,
+        "12M": 3.6
       },
       "source": "hket+moneyhk101",
       "cny_rates": {
-        "1M": 0.1,
-        "3M": 0.31,
-        "6M": 0.41,
-        "12M": 0.51
+        "1M": null,
+        "3M": null,
+        "6M": null,
+        "12M": null
       },
       "cny_new_fund_rates": {
-        "1M": 0.1,
-        "3M": 0.31,
-        "6M": 0.41,
-        "12M": 1.6
+        "1M": 1.5,
+        "3M": 2.0,
+        "6M": null,
+        "12M": 1.85
       }
     },
     {
@@ -1172,10 +1168,10 @@
       "min_deposit": "HK$100",
       "url": "https://www.paobank.com/",
       "rates": {
-        "1M": 1.1,
+        "1M": 2.0,
         "3M": 2.4,
-        "6M": 2.5,
-        "12M": 2.5
+        "6M": 2.4,
+        "12M": 2.4
       },
       "promo_rates": {
         "1M": {
@@ -1186,9 +1182,9 @@
       "notes": "HKET: New customer 15% (1M). HKD: 3M=2.65, 6M=2.75, 12M=2.75. moneyhk101 Apr5: USD 3M=4.85 (highest!), 6M=4.6, 12M=4.3. CNY 3M=2.55, 6M=2.55.",
       "new_fund_rates": {
         "1M": null,
-        "3M": 2.65,
-        "6M": 2.75,
-        "12M": 2.75
+        "3M": 2.55,
+        "6M": 2.65,
+        "12M": 2.65
       },
       "usd_rates": {
         "1M": 6.4,
@@ -1224,17 +1220,17 @@
       "min_deposit": "HK$1,000",
       "url": "https://www.airstarbank.com/",
       "rates": {
-        "1M": 1.5,
+        "1M": 1.2,
         "3M": 2.2,
-        "6M": 2.55,
-        "12M": 2.8
+        "6M": 2.4,
+        "12M": 2.7
       },
       "notes": "HKET: 1M=1.5, 3M=2.2, 6M=2.55, 12M=2.8. moneyhk101 Apr5: USD 3M=4.3, 12M=4.4 (highest long-term!). CNY 3M=2.4, 12M=2.6.",
       "new_fund_rates": {
-        "1M": 1.5,
+        "1M": 1.2,
         "3M": 2.2,
-        "6M": 2.55,
-        "12M": 2.8
+        "6M": 2.4,
+        "12M": 2.7
       },
       "usd_rates": {
         "1M": null,
@@ -1318,40 +1314,40 @@
       "rates": {
         "1M": 0.25,
         "3M": 2.1,
-        "6M": 2.2,
-        "12M": 2.3
+        "6M": 2.3,
+        "12M": 2.5
       },
       "notes": "HKET: Selected customer new fund. moneyhk101 Apr5: USD 1M=3.6, 3M=4.2, 6M=4.2, 12M=3.9. CNY 1M=1.3.",
       "new_fund_rates": {
         "1M": 0.25,
         "3M": 2.15,
-        "6M": 2.3,
-        "12M": 2.35
+        "6M": 2.35,
+        "12M": 2.55
       },
       "usd_rates": {
-        "1M": 3.3,
-        "3M": 3.3,
-        "6M": 3.25,
-        "12M": 3.1
+        "1M": 2.5,
+        "3M": 3.0,
+        "6M": 2.8,
+        "12M": 2.5
       },
       "usd_new_fund_rates": {
-        "1M": 3.6,
-        "3M": 4.2,
-        "6M": 4.2,
-        "12M": 3.9
+        "1M": 3.8,
+        "3M": 4.1,
+        "6M": 3.7,
+        "12M": 3.5
       },
       "source": "hket+moneyhk101",
       "cny_rates": {
         "1M": null,
-        "3M": 1.0,
-        "6M": 1.0,
-        "12M": 1.0
+        "3M": null,
+        "6M": null,
+        "12M": null
       },
       "cny_new_fund_rates": {
-        "1M": 1.3,
-        "3M": 1.0,
-        "6M": 1.0,
-        "12M": 1.0
+        "1M": null,
+        "3M": null,
+        "6M": 1.8,
+        "12M": null
       }
     },
     {
@@ -1363,15 +1359,15 @@
       "url": "https://www.livibank.com/",
       "rates": {
         "1M": 1.2,
-        "3M": 2.2,
-        "6M": 2.2,
+        "3M": 2.0,
+        "6M": 2.0,
         "12M": 2.0
       },
       "notes": "HKET: 1M=1.2, 3M=2.2, 6M=2.2, 12M=2.0. moneyhk101 Apr5: CNY 1M=1.0, 12M=1.3.",
       "new_fund_rates": {
         "1M": 1.2,
-        "3M": 2.2,
-        "6M": 2.2,
+        "3M": 2.0,
+        "6M": 2.0,
         "12M": 2.0
       },
       "usd_rates": {
