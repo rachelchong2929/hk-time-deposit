@@ -29,7 +29,7 @@ Only provided fields are updated; missing fields are left unchanged.
 import json
 import sys
 import os
-from datetime import date
+from datetime import date, datetime, timezone, timedelta
 
 RATES_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "rates.json")
 
@@ -78,6 +78,8 @@ def main():
     # Update metadata
     today = patch.get("date", date.today().isoformat())
     data["last_updated"] = today
+    hkt = timezone(timedelta(hours=8))
+    data["update_time"] = datetime.now(hkt).strftime("%H:%M") + " HKT"
     source = patch.get("source", "official bank websites + HKET + moneyhk101")
     data["data_source"] = f"Compiled from {source} ({today})"
 

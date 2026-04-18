@@ -346,7 +346,7 @@ function saveMyBanks(){localStorage.setItem('hktd_mybanks',JSON.stringify([...my
 // ── Load Data ──
 async function loadData(){
 try{const r=await fetch('data/rates.json');const d=await r.json();banks=d.banks;
-document.getElementById('lastUpd').textContent=d.last_updated;
+document.getElementById('lastUpd').textContent=d.last_updated+(d.update_time?' '+d.update_time:'');
 document.getElementById('bCnt').textContent=banks.length;
 buildProfile();renderAll();}catch(e){document.getElementById('tbody').innerHTML='<tr><td colspan="8" style="text-align:center;padding:40px;color:var(--text2)">載入失敗</td></tr>';}
 }
